@@ -31,5 +31,35 @@ document.addEventListener('DOMContentLoaded', () => {
   createBoard()
 
   // Drag the candies
-  squares.forEach
+  squares.forEach(squares => square.addEventListener('dragstart', dragStart)) 
+  squares.forEach(squares => square.addEventListener('dragend', dragEnd)) 
+  squares.forEach(squares => square.addEventListener('dragover', dragOver)) 
+  squares.forEach(squares => square.addEventListener('dragenter', dragEnter)) 
+  squares.forEach(squares => square.addEventListener('dragleave', dragLeave)) 
+  squares.forEach(squares => square.addEventListener('drop', dragDrop)) 
+
+  function dragStart(){
+    console.log(this.id, 'dragstart')
+  }
+
+  function dragOver(){
+    console.log(this.id, 'dragover')
+  }
+
+  function dragEnter(){
+    console.log(this.id, 'dragenter')
+  }
+
+  function dragLeave(){
+    console.log(this.id, 'dragleave')
+  }
+
+  function dragDrop(){
+    console.log(this.id, 'dragdrop')
+  }
+
+  function dragEnd(){
+    console.log(this.id, 'dragend')
+  }
+  
 })
